@@ -1,0 +1,29 @@
+title: Lyons Family Homeschool
+description: >-
+  A homeschool website for the Lyons family.
+
+baseurl: "" 
+url: "https://maureen.github.io/homeschool"
+
+# Theme
+theme: minima
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Exclude from processing
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
