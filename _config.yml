@@ -15,6 +15,10 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
 
+# Include video files
+include:
+  - jojo-vids
+
 # Exclude from processing
 exclude:
   - .sass-cache/

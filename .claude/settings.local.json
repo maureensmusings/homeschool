@@ -6,7 +6,13 @@
       "WebFetch(domain:www.merriam-webster.com)",
       "WebFetch(domain:media.merriam-webster.com)",
       "WebFetch(domain:github.com)",
-      "Bash(rm:*)"
+      "Bash(rm:*)",
+      "Bash(find:*)",
+      "Bash(cp:*)",
+      "Bash(ls:*)",
+      "Bash(bundle exec jekyll serve:*)",
+      "Bash(grep:*)",
+      "Bash(pkill:*)"
     ],
     "deny": []
   }
