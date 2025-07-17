@@ -1,7 +1,11 @@
 {
   "permissions": {
     "allow": [
-      "Bash(mkdir:*)"
+      "Bash(mkdir:*)",
+      "WebFetch(domain:dictionary.cambridge.org)",
+      "WebFetch(domain:www.merriam-webster.com)",
+      "WebFetch(domain:media.merriam-webster.com)",
+      "WebFetch(domain:github.com)"
     ],
     "deny": []
   }
