@@ -1,3 +1,4 @@
 index.html homeschool2025
 lesson-one.html homeschool2025
-jojo-tutorial.html homeschool2025
+jojo-basics.html homeschool2025
+jojo-body.html homeschool2025
