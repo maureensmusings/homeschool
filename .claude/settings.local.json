@@ -12,7 +12,9 @@
       "Bash(ls:*)",
       "Bash(bundle exec jekyll serve:*)",
       "Bash(grep:*)",
-      "Bash(pkill:*)"
+      "Bash(pkill:*)",
+      "Bash(ffprobe:*)",
+      "Bash(bundle lock:*)"
     ],
     "deny": []
   }
