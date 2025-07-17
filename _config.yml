@@ -2,8 +2,8 @@ title: Lyons Family Homeschool
 description: >-
   A homeschool website for the Lyons family.
 
-baseurl: "" 
-url: "https://maureen.github.io/homeschool"
+baseurl: "/homeschool" 
+url: "https://maureensmusings.github.io"
 
 # Theme
 theme: minima
