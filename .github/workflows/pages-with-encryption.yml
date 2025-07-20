@@ -47,6 +47,23 @@ jobs:
       - name: Install PageCrypt
         run: npm install -g pagecrypt@5.1.0
       
+      - name: Add custom CSS to pages before encryption
+        run: |
+          if [ -f "_protected_pages.txt" ]; then
+            while IFS=' ' read -r filename password || [ -n "$filename" ]; do
+              if [ -f "_site/$filename" ]; then
+                echo "Adding custom CSS to $filename..."
+                # Add CSS to hide PageCrypt branding before encryption
+                sed -i '/<\/head>/i\
+                <style>\
+                a[href*="pagecrypt"] { display: none !important; }\
+                a[href*="github.com/MaxLaumeister/PageCrypt"] { display: none !important; }\
+                main > a:last-child { display: none !important; }\
+                </style>' "_site/$filename"
+              fi
+            done < "_protected_pages.txt"
+          fi
+
       - name: Encrypt protected pages
         run: |
           if [ -f "_protected_pages.txt" ]; then

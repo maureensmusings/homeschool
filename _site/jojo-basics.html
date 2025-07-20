@@ -8,9 +8,11 @@
     <meta name="description" content="A homeschool website for the Lyons family.">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        main > a:last-child {
-            display: none;
-        }
+        /* Hide PageCrypt branding link */
+        a[href*="pagecrypt"] { display: none !important; }
+        a[href*="github.com/MaxLaumeister/PageCrypt"] { display: none !important; }
+        /* Fallback - hide last link in main */
+        main > a:last-child { display: none !important; }
     </style>
     <link rel="canonical" href="http://localhost:4000/homeschool/jojo-basics.html">
     <link rel="alternate" type="application/rss+xml" title="Lyons Family Homeschool" href="/homeschool/feed.xml">
