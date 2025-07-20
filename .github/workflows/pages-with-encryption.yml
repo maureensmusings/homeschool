@@ -78,6 +78,21 @@ jobs:
           else
             echo "No _protected_pages.txt file found"
           fi
+
+      - name: Remove PageCrypt branding after encryption
+        run: |
+          if [ -f "_protected_pages.txt" ]; then
+            while IFS=' ' read -r filename password || [ -n "$filename" ]; do
+              if [ -f "_site/$filename" ]; then
+                echo "Removing PageCrypt branding from $filename..."
+                # Remove PageCrypt branding links
+                sed -i 's/<a[^>]*github\.com\/MaxLaumeister\/PageCrypt[^>]*>.*<\/a>//g' "_site/$filename"
+                sed -i 's/<a[^>]*pagecrypt[^>]*>.*<\/a>//g' "_site/$filename"
+                # Remove any standalone PageCrypt text/links at the end
+                sed -i 's/Created with.*PageCrypt.*//g' "_site/$filename"
+              fi
+            done < "_protected_pages.txt"
+          fi
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
