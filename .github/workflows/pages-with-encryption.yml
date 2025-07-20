@@ -53,7 +53,7 @@ jobs:
             while IFS=' ' read -r filename password || [ -n "$filename" ]; do
               if [ -f "_site/$filename" ]; then
                 echo "Encrypting $filename with password protection..."
-                pagecrypt "_site/$filename" "_site/$filename" "$password"
+                pagecrypt "_site/$filename" "_site/$filename" "$password" --no-banner
               else
                 echo "Warning: $filename not found in _site directory"
               fi
