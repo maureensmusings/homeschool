@@ -7,18 +7,11 @@
     <title>JoJo Tutorial | Lyons Family Homeschool</title>
     <meta name="description" content="A homeschool website for the Lyons family.">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Remove the last anchor link in main element (PageCrypt branding)
-            const main = document.querySelector('main');
-            if (main) {
-                const lastLink = main.querySelector('a:last-child');
-                if (lastLink) {
-                    lastLink.remove();
-                }
-            }
-        });
-    </script>
+    <style>
+        main > a:last-child {
+            display: none;
+        }
+    </style>
     <link rel="canonical" href="http://localhost:4000/homeschool/jojo-tutorial.html">
     <link rel="alternate" type="application/rss+xml" title="Lyons Family Homeschool" href="/homeschool/feed.xml">
     <!-- Begin Jekyll SEO tag v2.8.0 -->
